@@ -1,3 +1,4 @@
+/*
 //
 //  TipPicker.swift
 //  GreenKit
@@ -40,6 +41,7 @@ func pickTip() -> String {
     }
     return tempTip
 }
+ */
 */
 func pickTip() -> String {
     let tempTip = environmentalTips.randomElement() ?? defaultValue
