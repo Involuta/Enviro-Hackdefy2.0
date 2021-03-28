@@ -11,18 +11,20 @@ struct TipView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Spacer()
                 Text("Welcome!")
                     .padding()
-                    .font(.headline)
+                    .padding(.top, 20)
+                    .font(.custom("Avenir Next", size: 25, relativeTo: .headline))
                 Spacer()
                 Text("Tip of the Day:")
                     .padding()
-                    .font(.title)
+                    .font(.custom("Avenir Next", size: 40, relativeTo: .title))
                 Spacer()
                 Text(pickTip())
                     .padding()
+                    .font(.custom("Avenir Next", size: 17.5, relativeTo: .body))
                     .multilineTextAlignment(.center)
+                Spacer()
                 Spacer()
                 HStack {
                     VStack {
@@ -32,7 +34,7 @@ struct TipView: View {
                         }
                         Text("Timers")
                             .foregroundColor(.blue)
-                            .padding(.bottom, 10)
+                            .padding(.bottom, 20)
                         
                     }
                     VStack {
@@ -44,7 +46,7 @@ struct TipView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct TipView_Previews: PreviewProvider {
     static var previews: some View {
         TipView()
     }
